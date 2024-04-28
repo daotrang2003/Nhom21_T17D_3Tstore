@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>mô tả sản phẩm </title>
+    <style>
+        /*header*/
+        *
+{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+
+}
+main
+{
+    margin: 0;
+    background-color: #F4F3EE;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    background-size: cover;
+}
+/*HEADER*/
+header
+{
+    background-color: white;
+}
+.containerheader
+{
+    display:flex;
+    flex-wrap: wrap;
+}
+#containerheader:hover
+{
+    background-color:blue;
+}
+.khungheader
+{
+    padding:0px;
+    border:none;
+    margin:10px;
+}
+.khung-1
+{
+    width:163px;
+}
+.center-align
+{
+    margin-left:-7px;
+    width:122px;
+    margin-top: -17px;
+}
+.brand
+{
+    margin:-79px;
+    margin-left: 92px;
+    font-size:27px;
+}
+.khung-2
+{
+    width:758px;
+    margin-top: 61px;
+    margin-left: 85px;
+}
+.danhmuc
+{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-gap:10px;
+    text-align: center;
+    padding: 12px;
+    margin-top: -26px;
+    font-size: 19px;
+    cursor: pointer;
+}
+a
+{
+    color:black;
+    text-decoration: none;
+}
+.noidung
+{
+    display: inline-block;
+    margin-right:26px;
+    color:black;
+}
+.noidung:hover
+{
+    color:rgb(185, 145, 11);
+}
+.text2
+{
+    margin-top:-20px;
+}
+.sptieude:hover
+{
+    color:rgb(185, 145, 11);
+}
+.danhmucsp
+{
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    position:relative;
+    z-index: 999;
+    color:black;
+}
+.andanhmucsp
+{
+    display: none;
+    white-space: pre-line;
+    position: absolute;
+    top: 58px;
+    left: -22px;
+    z-index: 999;
+    background-color: white;
+    width: 173px;
+    cursor: pointer;
+}
+#KCN:hover
+{
+    color:rgb(146, 114, 10)
+}
+#TT:hover
+{
+    color:rgb(146, 114, 10)
+}
+#SRM:hover
+{
+    color:rgb(146, 114, 10) 
+}
+#NCB:hover
+{
+    color:rgb(146, 114, 10)
+}  
+#MN:hover
+{
+    color:rgb(146, 114, 10)
+}
+#KD:hover
+{
+    color:rgb(146, 114, 10)
+}
+#NDT:hover
+{
+    color:rgb(146, 114, 10)
+}   
+#DG:hover
+{
+    color:rgb(146, 114, 10)
+}
+#CSTK:hover
+{
+    color:rgb(146, 114, 10)
+}
+
+.danhmucsp:hover .andanhmucsp 
+{
+    display: block;
+}
+.khung-3
+{
+    width:120px;
+    margin-top:1px;
+    margin-left:1px;
+}
+.input-wrapper
+{
+    position:relative;
+    display: inline-block;
+    width:150px;
+}
+.input-wrapper input
+{
+    margin-top: 38px;
+    width: 150px;
+    height: 40px;
+    border-radius:13px;
+    overflow: hidden;
+}
+.icon
+{
+    margin-top:12px;
+    margin-left:-235px;
+    font-size:20px;
+    color:#999;
+}
+.input-wrapper .icon
+{
+    position:absolute;
+    top:56%;
+    right:3px;
+    transform:translateY(-50%);
+}
+.khung-4
+{
+    margin-top: 42px;
+    margin-left: 31px;
+    font-size: 33px;
+}
+/*GIỎ HÀNG*/
+.cart-icon {
+    top: 20px;
+    right: 30px;
+    width: 60px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-top: -9px;
+    font-size: 32px;
+    color: black;
+  }
+
+  .cart-content {
+    position: fixed;
+    top: 31%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    width: 459px;
+    overflow-y: auto;
+    background-color: #ddd;
+    border: 1px solid #ccc;
+    padding: 20px;
+    display: none;
+    height: 450px;
+  }
+  .close-btn {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  .cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    white-space:pre-line;
+  }
+
+  .cart-item-image {
+    width: 23%;
+    margin-right: 10px;
+  }
+
+  .cart-item-name {
+    font-size: 20px;
+  }
+
+  .cart-item-price 
+  {
+    font-weight: bold;
+    margin-top: 137px;
+    font-size: 15px;
+    width: 145px;
+  }
+
+  .cart-item-quantity {
+     font-size: 14px;
+     width: 51px;
+  }
+
+  .cart-total {
+    text-align: right;
+    margin-top: 20px;
+    font-weight: bold;
+  }
+
+  .checkout {
+    display: block;
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #ccc;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+  }
+  .cart-item-count
+  {
+    color: red;
+    margin-top: -25px;
+    font-size: 22px;
+    margin-right: 0px;
+  }
+
+  .product-name
+  {
+    margin-bottom:5px
+  }
+/*noi dung*/
+
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .product-info {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .product-image {
+            width: 450px; /* Thiết lập chiều rộng mong muốn */
+            height: auto; /* Đảm bảo tỷ lệ khung hình bảo toàn */
+            margin-right: 20px;
+            transition: transform 0.3s ease-in-out;}
+    
+        .mota {
+            display: flex;
+        }
+        .product-description {
+            flex: 1;
+        }
+        .product-description h2 {
+            text-align: center;
+        }
+        #description {
+            margin-top: 30px;
+        }
+
+        #description h3 {
+            margin-bottom: 10px;
+        }
+
+        #description p {
+            line-height: 1.6;
+        }
+    
+        #reviews-container {
+            margin-top: 30px;
+        }
+
+        #review-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #review-list li {
+            background-color: #f9f9f9;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        
+            
+        }
+
+        textarea {
+            width: 98%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            resize: none;
+        }
+
+        #icon-giohang {
+            width: 200px;
+            margin: auto;
+            padding: 10px 20px;
+            background-color: #4caf50;
+            border: none;
+
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        #icon-giohang:hover {
+            background-color: #45a049;
+        }
+
+        #login-message {
+            text-align: center;
+            color: red;
+            display: none;
+        }
+
+        .action-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .gio-hang {
+        font-size: 40px;
+        cursor: pointer;
+        }
+
+        #write-review-button {
+            padding: 10px 20px;
+            background-color: #528d2d;
+        }
+/*FOOTER*/
+footer
+{
+  display: flex;
+  flex-wrap: wrap;
+  background-color:#ddd;
+}
+.column-footer
+{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border: none;
+    margin-left: 68px;
+    font-size: 18px;
+}
+.listHĐ
+{
+    white-space: pre-line;
+    line-height: 2.3;
+    font-size: 19px;
+    margin-top: -35px;
+}
+.a {
+  background-color: blue;
+  color: white;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
+}
+
+.a:hover {
+  background-color: red;
+}
+a
+{
+    line-height: 1;
+    color: black;
+}
+.copy
+{
+  background-color: rgb(117, 90, 90);
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  margin-top: -18px;
+}
+button
+{
+    border:none;
+    background:white;
+    font-size: 19px;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="containerheader">
+            <div class="khungheader khung-1">
+                <img src="https://i.imgur.com/M0dA61B.png" wid="90" class="center-align">
+                <div class="brand">
+                    3T STORE
+                </div>
+            </div>
+            <div class="khunghrader khung-2">
+                <div class="danhmuc">
+                    <a href="../Nhom21_DHTMDT17D_3Tstore/trangchu.html">
+                        <span class="noidung"> TRANG CHỦ</span></a>
+                        <a href="../Nhom21_DHTMDT17D_3Tstore/gioithieu.html">
+                            <span class="noidung">GIỚI THIỆU</span></a>
+                            <div class="text2">
+                                <div class="danhmucsp">
+                                    <a href="../Nhom21_DHTMDT17D_3Tstore/trangsanpham.html">
+                                    <span class="sptieude">SẢN PHẨM</span></a>
+                            <div class="andanhmucsp">
+                                <p id="KCN" > Kem chống nắng</p>
+                                <p id ="TT">Tẩy trang</p>    
+                                <p id ="SRM" >Sửa rửa mặt</p>    
+                                <p id ="NCB">Nước cân bằng</p>    
+                                <p id="MN" >Mặt nạ & Tẩy da chết</p>    
+                                <p id="KD" >Kem dưỡng</p>    
+                                <p id="NDT">Nước dưỡng tóc</p>    
+                                <p id="DG" >Dầu gội</p>    
+                                <p id="CSTK">Chăm sóc tóc khác</p>    
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="../Nhom21_DHTMDT17D_3Tstore/tintuc.html">
+                        <span class="noidung" style="margin-right: 18px;"> TIN TỨC</span></a>
+                        <a href="../Nhom21_DHTMDT17D_3Tstore/lienhe.html">
+                        <span class="noidung" style="margin-right: 52px;">LIÊN HỆ</span></a>
+                </div>
+            </div>
+            <div class="khungheader khung-3">
+                <div class="input-wrapper">
+                    <input type="text" id="timkiem" placeholder="Tìm kiếm ...">
+                    <span class="icon"> <i class="fa-solid fa-magnifying-glass"></i></span>
+                </div>
+            </div>
+            <div class="khungheader khung-4">
+                <div class="cart-icon">
+                    <i class="fa-solid fa-cart-shopping" ></i> <span  class="cart-item-count"></span>
+                    <a href="../Nhom21_DHTMDT17D_3Tstore/dangnhap.html">
+                        <i class="fa-solid fa-user" style="margin-left:18px;"></i>
+                    </a>
+                </div>
+                <div class="cart-content">
+                    <div class="close-btn">&times;</div> 
+                      <div class="cart-items">
+                        <div class="cart-item-name"></div><br>
+                        <div class="cart-item-price"></div>  
+                      </div>
+                      <div class="cart-total">Tổng tiền: 0 ₫</div>
+                    <button class="checkout" >Mua Hàng</button>
+                </div>
+            </div>
+        </div>
+        <script>
+            // Scroll to the "kem chống nắng" section when clicking on the link
+            document.addEventListener('DOMContentLoaded', function() {
+                document.getElementById('KCN').addEventListener('click', function() {
+                    document.getElementById('kemchongnang').scrollIntoView({ behavior: 'smooth' });
+                });
+            });
+             // Scroll to the "tẩy trang" section when clicking on the link
+             document.addEventListener('DOMContentLoaded', function() {
+                document.getElementById('TT').addEventListener('click', function() {
+                    document.getElementById('taytrang').scrollIntoView({ behavior: 'smooth' });
+                });
+            });
+             // Scroll to the "sữa rửa mặt" section when clicking on the link
+             document.addEventListener('DOMContentLoaded', function() {
+                document.getElementById('SRM').addEventListener('click', function() {
+                    document.getElementById('suaruamat').scrollIntoView({ behavior: 'smooth' });
+                });
+            });
+             // Scroll to the "Nước cân bằng" section when clicking on the link
+             document.addEventListener('DOMContentLoaded', function() {
+                document.getElementById('NCB').addEventListener('click', function() {
+                    document.getElementById('nuoccanbang').scrollIntoView({ behavior: 'smooth' });
+                });
+            });
+             // Scroll to the "mặt nạ" section when clicking on the link
+             document.addEventListener('DOMContentLoaded', function() {
+                document.getElementById('MN').addEventListener('click', function() {
+                    document.getElementById('matna').scrollIntoView({ behavior: 'smooth' });
+                });
+            });
+             // Scroll to the "kem dưỡng" section when clicking on the link
+             document.addEventListener('DOMContentLoaded', function() {
+                document.getElementById('KD').addEventListener('click', function() {
+                    document.getElementById('kemduong').scrollIntoView({ behavior: 'smooth' });
+                });
+            });
+             // Scroll to the "Nước dưỡng tóc " section when clicking on the link
+             document.addEventListener('DOMContentLoaded', function() {
+                document.getElementById('NDT').addEventListener('click', function() {
+                    document.getElementById('nuocduongtoc').scrollIntoView({ behavior: 'smooth' });
+                });
+            });
+             // Scroll to the "dầu gội" section when clicking on the link
+             document.addEventListener('DOMContentLoaded', function() {
+                document.getElementById('DG').addEventListener('click', function() {
+                    document.getElementById('daugoi').scrollIntoView({ behavior: 'smooth' });
+                });
+            });
+             // Scroll to the "chăm sóc tóc khác" section when clicking on the link
+             document.addEventListener('DOMContentLoaded', function() {
+                document.getElementById('CSTK').addEventListener('click', function() {
+                    document.getElementById('chamsoctockhac').scrollIntoView({ behavior: 'smooth' });
+                });
+            });
+        </script>
+    </header>
+<main>
+    <div class="container">
+        <div class="product-info">
+            <img class="product-image" src="https://image.cocoonvietnam.com/uploads/z3955699562722_f08debe9657c26ce2a9a6333b3295060_1476261cc8.jpg" alt="Product Image">
+            <div class="product-description">
+                <h2> DẦU GỘI BƯỞI KHÔNG SULFATE 310ML</h2>
+                
+                <p>Từ tinh dầu vỏ bưởi Việt Nam truyền thống kết hợp với vitamin B5, hoạt chất dưỡng ẩm Xylishine™ cùng công thức dịu nhẹ không chứa sulfate, dầu gội bưởi giúp làm sạch tóc và giảm gãy rụng, mang lại mái tóc đen dày, chắc khoẻ và mượt mà
+                </p>
+             
+                <br>
+                <h3> Thích hợp với </h3>
+                <p> Mọi loại tóc </p>
+            
+            <br>
+                <h3> Thành Phần Chính </h3>
+                <p> Tinh dầu bưởi, Vitamin B5, Xylishine™ và Axít amin</p>
+        
+                <br>
+                <h3>245.000 đ</h3>
+                <br> 
+                <div class="action-buttons">
+                    <button style="background:none;" id ="gio-hang" class="add-to-cart" data-image="https://image.cocoonvietnam.com/uploads/z3955699562722_f08debe9657c26ce2a9a6333b3295060_1476261cc8.jpg" data-name="DẦU GỘI BƯỞI KHÔNG SULFATE 310ML" data-price="245000" > <i id="icon-giohang" class="fas fa-shopping-cart "> </i> </button>
+                    <button class="button" id="write-review-button">Viết đánh giá</button>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br> 
+        <br> 
+        <script src="../Nhom21_DHTMDT17D_3Tstore/trangsanpham.js"></script>
+    
+
+        <div> 
+        <h3>Mô tả chi tiết</h3>
+        <div class="mota" id="description">
+
+            <img class="product-image" src="https://image.cocoonvietnam.com/uploads/Artboard_16_3a48788a4e.png" alt="Product Image">
+            <p>THÀNH PHẦN CHÍNH
+
+                Tinh dầu bưởi
+                Được trích ly từ vỏ bưởi chứa hàm lượng lớn limonene có khả năng ức chế mạnh mẽ enzyme 5-alpha reductase loại 2 trên da đầu - nguyên nhân chính gây rụng tóc. Đồng thời do có tính kháng khuẩn và chống oxy hóa cao, tinh dầu vỏ bưởi sẽ mang lại cho bạn da đầu và tóc khỏe mạnh.
+                Xylishine™
+                Được chiết xuất từ tảo nâu, Pelvetia canaliculata và các loại đường tự nhiên có trong gỗ. Xylishine ™ là chất dưỡng ẩm và phục hồi tóc, giúp tăng cường độ bóng của tóc.
+                Vitamin B5 (D-panthenol)
+                Chức năng như một tác nhân dưỡng tóc để cung cấp độ ẩm lâu dài cho tóc, ngăn ngừa hư tổn, làm dày tóc và cải thiện độ bóng khỏe của mái tóc.
+                Axít amin
+                Có tác dụng dưỡng ẩm, củng cố cấu trúc, bảo vệ màu sắc và sửa chữa các hư hỏng bề mặt của tóc.
+            </p>
+        </div>
+        </div>
+<br> 
+        <h3>Khách hàng đánh giá nhận xét </h3>
+        <br>
+        <div class="review-form-container">
+            <form id="review-form">
+                <div class="form-group">
+                    <textarea id="review-content" placeholder="Viết nhận xét của bạn..."></textarea>
+                </div>
+                <button type="submit">Gửi nhận xét</button>
+                <p id="login-message">Vui lòng đăng nhập để đánh giá.</p>
+            </form>
+            <br> 
+        </div>
+            <div id="review-list"></div>
+        </div>
+    </div>
+</main>
+<footer>
+    <div class="column-footer">
+        <div>
+            <h3 style="margin-top: 30px;">THÔNG TIN</h3><br>
+            <div>
+                <a> Hotline:  19009300 </a> <br>
+                    Hợp tác: <a target="_blank">3TStore2024@gmail.com</a>
+            </div>
+            <div class="map-container"style="margin-top: 22px; width: 103%;">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62696.94957231656!2d106.53810724863283!3d10.844994999999992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752a3107e6806f%3A0x35888f3be64f9389!2zQ2hpIE5ow6FuaCAxIC0gQ8O0bmcgVHkgVG5oaCBUaMawxqFuZyBN4bqhaSBHaeG6pXkgVG_DoG4gUXXhu5Fj!5e0!3m2!1svi!2s!4v1712922233161!5m2!1svi!2s" width="87%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+           </div>
+        </div>
+        <div style="margin-left: 74px;">
+            <h3 style="margin-top: 30px;">HỎI ĐÁP</h3>
+            <div class="listHĐ">
+                <a>Hướng dẫn mua hàng
+                Chính sách bán hàng
+                Điều khoản bảo mật
+                Liên hệ chúng tôi 
+                Về chúng tôi</a>
+            </div>
+        </div>
+        <div>
+            <h3 style="margin-top: 30px;">CÀI ĐẶT ỨNG DỤNG</h3>
+            <div class="thanhtoan"style="padding-top: 10px;">
+              <img src="https://i.imgur.com/4D3XvUZ.jpeg" style="width: 40%; margin-top: 19px; margin-bottom: -3px;border-radius: 20px;overflow: hidden;">
+              <img src="https://i.imgur.com/DOtfaVl.png" style=" width: 40%;height: 38px;margin-top: 19px; margin-bottom: -3px;border-radius: 20px;overflow: hidden;">
+            </div>
+            <div class="hinhthucTT" style="margin-top: 17px;">
+                <span style="font-size: 20px;">Chấp nhận thanh toán</span>
+                <div class="anhTT"style="margin-top: 21px;">
+                  <img src="https://i.imgur.com/AOyGaSr.jpeg"style="width: 18%;border-radius:13px;overflow: hidden;">
+                      <img src="https://i.imgur.com/OhyPXAb.png"style="width: 18%;border-radius:13px;overflow: hidden;">
+                      <img src="https://i.imgur.com/sOuetwi.jpeg"style="width: 18%;border-radius:13px;overflow: hidden;">
+                      <img src="https://i.imgur.com/hNvNRy2.png"style="width: 18%;border-radius:13px;overflow: hidden;">
+                </div>
+            </div>
+        </div>
+        <div style="margin-left: 61px;">
+            <h3 style="margin-top: 30px;">VỀ 3TSTORE</h3>
+            <div class="timeopen"style="width: 206px;font-size: 18px;margin-top: 18px;line-height: 1.8;padding-top: 4px;">
+                <span>Từ 9:00 - 21:30 tất cả các ngày trong tuần (bao gồm cả các ngày lễ, ngày Tết).</span>
+            </div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-9"style="margin-top: 9px;">
+            <ul class="nav list-unstyled menu-hoz-group" style="padding: 0px;font-size: 29px;">
+                <i class="fa-solid fa-cart-shopping" style="color: #215e2e;"></i>  
+                <i class="fa-brands fa-youtube"style="margin-left: 20px; color: red;"></i>
+                <i class="fa-brands fa-square-facebook"style="margin-left: 20px; color: #1d1d8d;"></i>
+                <i class="fa-brands fa-square-instagram"style="margin-left: 20px; color: rgb(224 101 101);"></i>
+            </ul>
+            <div class="flexfooterinfo" style="margin-top: 24px;">
+              <div>
+                 <a target="_blank" href="http://online.gov.vn/Home/WebDetails/69076"><img src="https://file.hstatic.net/1000006063/file/bct_copy_b45be4268f5044bb94285c84c7ca045e.png"></a>
+              </div>      
+            </div>
+          </div>
+        </div>
+      </div>
+  </footer>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Kiểm tra xem Local Storage có trạng thái đăng nhập hay không
+        var isLoggedIn = localStorage.getItem("isLoggedIn");
+    
+        if (isLoggedIn) {
+            // Nếu đã đăng nhập, hiển thị thông báo và tên người dùng
+            var loggedInUser = localStorage.getItem("loggedInUser");
+            alert("Bạn đã đăng nhập với: " + loggedInUser);
+        } else {
+            // Nếu chưa đăng nhập, hiển thị thông báo và chuyển hướng đến trang sản phẩm
+            alert("Bạn hãy đăng nhập");
+            window.location.href = "trangsanpham.html";
+        }
+    
+        // Kiểm tra xem Local Storage có thông tin người dùng đã đăng nhập không
+        var loggedInUser = localStorage.getItem("loggedInUser");
+    
+        if (loggedInUser) {
+            // Nếu đã đăng nhập, bạn có thể sử dụng tên người dùng để thực hiện các hành động khác trên trang
+            console.log("Người dùng đã đăng nhập với username:", loggedInUser);
+    
+            // Xử lý sự kiện khi người dùng gửi đánh giá
+            document.getElementById('review-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                
+                // Lấy nội dung đánh giá từ textarea
+                var reviewContent = document.getElementById('review-content').value;
+                
+                // Kiểm tra người dùng đã đăng nhập hay chưa
+                var loggedInUser = localStorage.getItem('loggedInUser');
+                if (!loggedInUser) {
+                    // Hiển thị thông điệp yêu cầu đăng nhập
+                    document.getElementById('login-message').style.display = 'block';
+                    return; // Dừng việc gửi đánh giá nếu chưa đăng nhập
+                }
+                
+                // Nếu người dùng đã đăng nhập, tiếp tục xử lý gửi đánh giá
+                var reviewMessage = '@' + loggedInUser + ': ' + reviewContent;
+    
+                // Đặt lại textarea sau khi gửi đánh giá
+                document.getElementById('review-content').value = '';
+    
+                // Ẩn thông điệp yêu cầu đăng nhập (nếu đã hiển thị trước đó)
+                document.getElementById('login-message').style.display = 'none';
+    
+                // Hiển thị nhận xét mới gửi
+                displayReview(reviewMessage);
+            });
+    
+            // Hiển thị nhận xét
+            function displayReview(review) {
+                var reviewList = document.getElementById('review-list');
+                var listItem = document.createElement('li');
+                listItem.textContent = review;
+                reviewList.appendChild(listItem);
+            }
+    
+            // Ấn vào viết đánh giá sẽ kéo xuống
+            document.getElementById('write-review-button').addEventListener('click', function() {
+                document.getElementById('review-form').scrollIntoView({ behavior: 'smooth' });
+            });
+        }
+    });
+    
+    </script>
+</body>
+</html>
